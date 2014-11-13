@@ -1,6 +1,5 @@
 from django.http import HttpResponse
 from polls.models import Question
-from django.http import Http404
 from django.shortcuts import render, get_object_or_404
 
 def index(request):
