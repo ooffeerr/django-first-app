@@ -11,3 +11,9 @@ class IndexView(generic.ListView):
     def get_queryset(self):
         """Return the last five published questions."""
         return Game.objects.order_by('-pub_date')[:5]
+
+
+class DetailView(generic.DetailView):
+    model = Game
+    context_object_name = 'game'
+    template_name = 'free_games/detail.html'
